@@ -1,11 +1,10 @@
-# hash = {:blake => 500, :ashley => 2, :adam => 1}
-# hash2 = {:blake => 10, :ashley => 50, :adam => 17}
-def key_for_min_value(name_hash) 
-    return :adam
-  if :blake < (:ashley or :adam)
-    return :blake
-  else ({})
-    puts "nil"
+def key_for_min_value(name_hash)
+  x = 1000
+  lowest_key = nil
+  name_hash.each do |key, value|
+     if value < x
+     lowest_key = key
+  end
  end
+ lowest_key
 end
-
